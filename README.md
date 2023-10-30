@@ -1,5 +1,8 @@
 # Optimizing Airbnb Listings: Insights and Recommendations for Property Owners/Investors
 
+This was a group-based project that I led in 2020 where we obtained a data set on Airbnb Listings and deployed various machine learning and data analytics techniques to uncover valuable listing insights. Other contributers to this project were Aarthi Ashokan, Joel Alencherry, Reeva Sanghavi, and Aditya Meher.
+
+
 
 **Problem Statement:**
 
@@ -19,7 +22,9 @@ Data pre-processing, feature engineering
 R, Excel, Tableau
 
 **Data:**
-This data was collected by Rudy Mizrahi and is accessible using this [link](https://www.kaggle.com/rudymizrahi/airbnb-listings-in-major-us-cities-deloitte-ml?select=train.csv)
+This data was collected by Rudy Mizrahi and is accessible using this [link](https://www.kaggle.com/rudymizrahi/airbnb-listings-in-major-us-cities-deloitte-ml?select=train.csv).
+
+
 
 ### How do listing prices vary between major US cities?
 
@@ -36,6 +41,8 @@ Tableau was used to create a bar chart of the average listing price of each city
 
 After averaging the booking prices across cities, SF had the highest average cost while Chicago had the lowest average cost. This information on listing costs could help Airbnb users decide which cities they could afford to visit.
 
+
+
 ### Which attributes are most influential on listing prices by city?
 
 Due to large price variation across cities, a linear regression model was developed for each city. These models did not include listing ID, latitude, longitude, zipcode, first_review, last_review, host_since as they were assumed to not have a significant impact on price compared to other attributes. Stepwise regression was executed to remove attributes that did not have a strong relationship to price.
@@ -43,6 +50,8 @@ Due to large price variation across cities, a linear regression model was develo
 Before proceeding to develop linear regression models, a correlation matrix was created to assess covariance between input variables and normal QQ plots were created to ensure normality of residuals. There was no covariance, and the residuals followed a relatively normal distribution, so it was safe to proceed to develop linear regression models. The following table shows the factors affecting price and the adjusted R-sq values for each model.
 
 For all the cities, the prices depend on the number of accommodates, number of bathrooms, room_type, bedrooms, review_score_rating, neighbourhood, and property_type. Additionally, models for each city have their own unique input variables that impact listing price. All of the input variables that most impact listing price for each city are shown in the tables.
+
+
 
 ### How do customer preferences impact whether their desired homestay will be cheap or expensive (relatively)?
 
@@ -55,7 +64,11 @@ For all the cities, the prices depend on the number of accommodates, number of b
 
 The classifier accuracies for each city and property type are as follows:
 
-For both property types, the Naive Bayes classifier outperformed the Logistic Regression and Decision Tree classifiers. With varying levels of accuracy that depend on the city and property type, the Naive Bayes classifier can determine if a customer will receive a relatively expensive or inexpensive property based on their preferences.
+For both property types, the Naive Bayes classifier outperformed the Logistic Regression and Decision Tree classifiers.
+
+With varying levels of accuracy that depend on the city and property type, the Naive Bayes classifier can determine if a customer will opt for a relatively expensive or inexpensive property based on their specific preferences. This knowledge can help in setting competitive and attractive prices that align with customer preferences.
+
+
 
 ### Which amenities are expected and which come with higher priced properties?
 
@@ -68,6 +81,7 @@ Analysis:
 
 - Almost all amenities are more frequent in expensive listings than in cheap listings.
 - Basic amenities have nearly the same frequency across all clusters, whereas ‘special’ amenities may be 1.5x or more frequent in expensive clusters than in cheap clusters.
+  
 
 ## Recommendations:
 
