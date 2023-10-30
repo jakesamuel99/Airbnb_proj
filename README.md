@@ -1,4 +1,7 @@
-# Problem Statement
+# Optimizing Airbnb Listings: Insights and Recommendations for Property Owners/Investors
+
+
+**Problem Statement:**
 
 Airbnb, Inc. is an American vacation rental online marketplace company based in San Francisco, California, United States. Airbnb maintains and hosts a marketplace, accessible to consumers on its website or via an app. Through the service, users can arrange lodging, primarily homestays, and tourism experiences or list their properties for rental.
 
@@ -18,7 +21,7 @@ R, Excel, Tableau
 **Data:**
 This data was collected by Rudy Mizrahi and is accessible using this [link](https://www.kaggle.com/rudymizrahi/airbnb-listings-in-major-us-cities-deloitte-ml?select=train.csv)
 
-## How do listing prices vary between major US cities?
+### How do listing prices vary between major US cities?
 
 The data was first preprocessed in the following manner:
 
@@ -33,7 +36,7 @@ Tableau was used to create a bar chart of the average listing price of each city
 
 After averaging the booking prices across cities, SF had the highest average cost while Chicago had the lowest average cost. This information on listing costs could help Airbnb users decide which cities they could afford to visit.
 
-## Which attributes are most influential on listing prices by city?
+### Which attributes are most influential on listing prices by city?
 
 Due to large price variation across cities, a linear regression model was developed for each city. These models did not include listing ID, latitude, longitude, zipcode, first_review, last_review, host_since as they were assumed to not have a significant impact on price compared to other attributes. Stepwise regression was executed to remove attributes that did not have a strong relationship to price.
 
@@ -41,7 +44,7 @@ Before proceeding to develop linear regression models, a correlation matrix was 
 
 For all the cities, the prices depend on the number of accommodates, number of bathrooms, room_type, bedrooms, review_score_rating, neighbourhood, and property_type. Additionally, models for each city have their own unique input variables that impact listing price. All of the input variables that most impact listing price for each city are shown in the tables.
 
-## How do customer preferences impact whether their desired homestay will be cheap or expensive (relatively)?
+### How do customer preferences impact whether their desired homestay will be cheap or expensive (relatively)?
 
 **Method:**
 1. Data was subsetted by city and property type (houses & apartments)
@@ -54,7 +57,7 @@ The classifier accuracies for each city and property type are as follows:
 
 For both property types, the Naive Bayes classifier outperformed the Logistic Regression and Decision Tree classifiers. With varying levels of accuracy that depend on the city and property type, the Naive Bayes classifier can determine if a customer will receive a relatively expensive or inexpensive property based on their preferences.
 
-## Which amenities are expected and which come with higher priced properties?
+### Which amenities are expected and which come with higher priced properties?
 
 **Method:**
 1. Text mining was implemented on the attribute amenities
