@@ -39,6 +39,8 @@ The data was first preprocessed in the following manner:
 
 Tableau was used to create a bar chart of the average listing price of each city.
 
+![](/images/airbnb_avg_value.png)
+
 After averaging the booking prices across cities, SF had the highest average cost while Chicago had the lowest average cost. This information on listing costs could help Airbnb users decide which cities they could afford to visit.
 
 
