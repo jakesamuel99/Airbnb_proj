@@ -49,6 +49,8 @@ Due to large price variation across cities, a linear regression model was develo
 
 Before proceeding to develop linear regression models, a correlation matrix was created to assess covariance between input variables and normal QQ plots were created to ensure normality of residuals. There was no covariance, and the residuals followed a relatively normal distribution, so it was safe to proceed to develop linear regression models. The following table shows the factors affecting price and the adjusted R-sq values for each model.
 
+![](/images/airbnb_regression.png)
+
 For all the cities, the prices depend on the number of accommodates, number of bathrooms, room_type, bedrooms, review_score_rating, neighbourhood, and property_type. Additionally, models for each city have their own unique input variables that impact listing price. All of the input variables that most impact listing price for each city are shown in the tables.
 
 
