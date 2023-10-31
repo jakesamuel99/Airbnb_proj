@@ -66,6 +66,8 @@ For all the cities, the prices depend on the number of accommodates, number of b
 
 The classifier accuracies for each city and property type are as follows:
 
+![](/images/airbnb_modelperformance.png)
+
 For both property types, the Naive Bayes classifier outperformed the Logistic Regression and Decision Tree classifiers.
 
 With varying levels of accuracy that depend on the city and property type, the Naive Bayes classifier can determine if a customer will opt for a relatively expensive or inexpensive property based on their specific preferences. This knowledge can help in setting competitive and attractive prices that align with customer preferences.
@@ -78,6 +80,12 @@ With varying levels of accuracy that depend on the city and property type, the N
 1. Text mining was implemented on the attribute amenities
 2. 6 clusters were created using K-Means clustering on the basis of price
 3. The most common amenities were determined for each cluster
+
+Below visually demonstrates the text mining implementation on amenities.
+![](/images/airbnb_textmining.png)
+
+The table below shows the frequency of various amenities for the different clusters.
+![](/images/airbnb_amenities.png)
 
 Analysis:
 
